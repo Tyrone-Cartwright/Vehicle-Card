@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --lexend-font: 'Lexend Deca', sans-serif;
     --big-shoulders: 'Big Shoulders Display', cursive;
@@ -21,11 +27,75 @@
     grid-template-areas: 
     "sedan suvs luxury";
     width: 900px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    margin: 150px auto;
+}
+
+.car-title {
+    font-family: var(--big-shoulders);
+    font-weight: 700;
+    color: var(--neutral-very-light-gray);
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.car-text {
+    font-family: var(--lexend-font);
+    font-size: var(--font-size);
+    color: var(--neutral-white);
+    font-weight: 400;
+    width: 78%;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.learn-more {
+    display: block;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--neutral-very-light-gray);
+    margin-top: 120px;    
+}
+
+.sedan a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+.suvs a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark-cyan);
+    font-weight: 700;
+}
+
+.luxury a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-very-dark-cyan);
+    font-weight: 700;
+}
+
+.inner {
+    padding: 40px 0 40px 30px;
 }
 
 .sedan {
     grid-area: sedan;
     background-color: var(--primary-orange);
+    border: none;
+    border-radius: 10px 0 0 10px;
 }
 
 .suvs {
@@ -36,6 +106,44 @@
 .luxury {
     grid-area: luxury;
     background-color: var(--primary-very-dark-cyan);
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 375px) and (max-width: 1440px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "sedan"
+        "suvs"
+        "luxury";
+        width: 300px;
+        height: 250px;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        margin: 150px auto;
+    }
+
+    .sedan {
+        grid-area: sedan;
+        border: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .suvs {
+        grid-area: suvs;
+    }
+
+    .luxury {
+        grid-area: luxury;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .learn-more {
+        margin-top: 60px;
+    }
 }
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */

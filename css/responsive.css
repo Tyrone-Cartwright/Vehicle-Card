@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --lexend-font: 'Lexend Deca', sans-serif;
@@ -13,6 +19,43 @@
     --neutral-white: hsla(0, 0%, 100%, 0.75);
     --neutral-very-light-gray: hsl(0, 0%, 95%);
 }
+
+@media only screen and (min-width: 700px) and (max-width: 1440px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "sedan"
+        "suvs"
+        "luxury";
+        width: 300px;
+        height: 250px;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        margin: 150px auto;
+    }
+
+    .sedan {
+        grid-area: sedan;
+        border: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .suvs {
+        grid-area: suvs;
+    }
+
+    .luxury {
+        grid-area: luxury;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .learn-more {
+        margin-top: 60px;
+    }
+} */
+
 
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
