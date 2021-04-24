@@ -13,5 +13,29 @@
     --neutral-white: hsla(0, 0%, 100%, 0.75);
     --neutral-very-light-gray: hsl(0, 0%, 95%);
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    "sedan suvs luxury";
+    width: 900px;
+}
+
+.sedan {
+    grid-area: sedan;
+    background-color: var(--primary-orange);
+}
+
+.suvs {
+    grid-area: suvs;
+    background-color: var(--primary-dark-cyan);
+}
+
+.luxury {
+    grid-area: luxury;
+    background-color: var(--primary-very-dark-cyan);
+}
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
