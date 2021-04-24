@@ -32,6 +32,11 @@
     margin: 150px auto;
 }
 
+img {
+    width: 64px;
+    height: 40px;
+}
+
 .car-title {
     font-family: var(--big-shoulders);
     font-weight: 700;
